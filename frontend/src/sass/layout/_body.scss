@@ -1,0 +1,21 @@
+@use '../abstract/' as a;
+
+body {
+  height: 100%;
+  width: 100%;
+}
+
+#root {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+main {
+  flex: 1;
+}
+
+.bg-dark {
+  background-color: a.$clr-purple;
+}
+

@@ -1,0 +1,25 @@
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 5px 20px;
+}
+
+.nav-logo {
+  width: 200px;
+}
+
+
+nav a {
+  text-decoration: none;
+  font-weight: bold;
+  margin-right: 0.5rem;
+}
+
+.test-div_true{
+  color: green;
+}
+
+.test-div_false{
+  color: red;
+}

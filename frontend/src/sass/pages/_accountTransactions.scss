@@ -1,0 +1,136 @@
+@use '../abstract/' as a;
+
+/* ACCOUNT TRANSACTIONS PAGE */
+.account-transactions {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.account-transactions__header {
+  color: white;
+  width: 100%;
+  margin: 0 0 50px 0;
+  padding: 10px;
+
+  & h1 {
+    font-size: 24px;
+  }
+  & span {
+    font-size: 20px;
+    display: block;
+    
+  }
+  & .account-transactions__header__account-balance {
+    font-weight: 700;
+    font-size: 30px;
+    margin: 10px 0;
+    color: a.$clr-green;
+  }
+}
+
+
+/* ACCOUNT TRANSACTIONS PAGE > TRANSACTION BOARD COMPONENT */
+
+.transactions-board {
+  width: 70%;
+}
+
+.transactions-board__header {
+  display: grid;
+  font-weight: 700;
+  grid-template-columns: 50px 1fr 1fr 1fr 1fr;
+  grid-template-areas: ". date description amount balance";
+
+  &__date {
+    grid-area: date;
+  }
+
+  &__description {
+    grid-area: description;
+  }
+
+  &__amount {
+    grid-area: amount;
+  }
+
+  &__balance {
+    grid-area: balance;
+  }
+}
+
+
+/* ACCOUNT TRANSACTIONS PAGE > TRANSACTION BOARD COMPONENT > TRANSACTION COMPONENT*/
+
+.transaction {
+  margin: 20px 0;
+}
+
+.transaction__collapse-button {
+  border: none;
+  background: none;
+  font-size: 20px;
+}
+
+.transaction-details {
+  display: grid;
+  grid-template-columns: 50px 1fr 1fr 1fr 1fr;
+  grid-template-areas: "button date description amount balance";
+  /* text-align: left; */
+
+  &__collapse-button {
+    grid-area: button;
+  }
+
+  &__date {
+    grid-area: date;
+  }
+
+  &__description {
+    grid-area: description;
+  }
+
+  &__amount {
+    grid-area: amount;
+  }
+
+  &__balance {
+    grid-area: balance;
+  }
+}
+
+.transaction-edition {
+  display: none;
+}
+
+.transaction-edition__notes {
+  display: flex;
+}
+
+.transaction-edition__category {
+  display: flex;
+}
+
+.expanded {
+  display: grid;
+  grid-template-columns: 50px 1fr 1fr 1fr 1fr;
+  grid-template-areas: ". col . . .";
+  text-align: left;
+}
+
+.transaction-edition__content {
+  grid-area: col;
+}
+
+.transaction-edition__category__content {
+  margin-right: 10px;
+}
+
+.transaction-edition__notes__content {
+  margin-right: 10px;
+}
+.transaction-edition__edit-button {
+  background: none;
+  border: none;
+  cursor: pointer;
+}

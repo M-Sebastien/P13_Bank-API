@@ -1,0 +1,82 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "Bootstrap dev environment",
+      "dependsOn": [
+        "Back | Node",
+        "Front | React",
+        "Git"
+      ],
+      "problemMatcher": []
+    },
+    {
+      "label": "Back | Node",
+      "type": "shell",
+      "command": "cd ./backend ; npm run server",
+
+      "isBackground": true,
+      "presentation": {
+        "reveal": "always",
+        "panel": "new",
+        "group": "First"
+      },
+      "runOptions": {
+        "runOn": "folderOpen"
+      }
+    },
+    {
+      "label": "node color",
+      "type":"shell",
+      "command": "${command: workbench.action.terminal.}"
+    },
+    {
+      "label": "Front | React",
+      "type": "shell",
+      "command": "cd ./frontend/ ; npm start",
+      "isBackground": true,
+      "presentation": {
+        "reveal": "always",
+        "panel": "new",
+        "group": "First"
+      },
+      "runOptions": {
+        "runOn": "folderOpen"
+      }
+    },
+    {
+      "label": "Git",
+      "type": "shell",
+      "command": "",
+      "isBackground": true,
+      "options": {
+        "shell": {
+          "executable": "cmd.exe",
+          "args": []
+        }
+      },
+      "presentation": {
+        "reveal": "always",
+        "panel": "new",
+        "group": "Second"
+      },
+      "runOptions": {
+        "runOn": "folderOpen"
+      }
+    },
+/*     {
+      "label": "ChangeFrontColor",
+      "type": "process",
+      "command": "${workbench.action.terminal.changeColor}",
+      "isBackground": false,
+      "presentation": {
+        "reveal": "always",
+        "panel": "new",
+        "group": "Frontend"
+      },
+      "runOptions": {
+        "runOn": "folderOpen"
+      }
+    } */
+  ]
+}
